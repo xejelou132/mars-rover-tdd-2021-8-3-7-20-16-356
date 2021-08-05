@@ -111,4 +111,35 @@ class DemoTest {
 
     }
 
+    @Test
+    void should_return_0_0_N_when_execute_command_given_0_0_E_and_L() {
+        //given
+        MarsRover marsRover = new MarsRover(0 , 0 , Direction.E);
+        RoverStatus expectedStatus = new RoverStatus(0 , 0, Direction.N);
+
+        //when
+        marsRover.executeCommand("L");
+
+        //then
+
+        assertEquals(expectedStatus.getLocationX(),marsRover.getLocationX());
+
+    }
+
+    @Test
+    void should_return_0_0_S_when_execute_command_given_0_0_E_and_R() {
+        //given
+        MarsRover marsRover = new MarsRover(0 , 0 , Direction.E);
+        RoverStatus expectedStatus = new RoverStatus(0 , 0, Direction.S);
+
+        //when
+        marsRover.executeCommand("R");
+
+        //then
+
+        assertEquals(expectedStatus.getLocationX(),marsRover.getLocationX());
+
+    }
+    
+
 }
