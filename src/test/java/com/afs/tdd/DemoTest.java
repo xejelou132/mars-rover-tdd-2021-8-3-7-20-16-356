@@ -50,4 +50,19 @@ class DemoTest {
         assertEquals(expectedStatus.getDirection(),marsRover.getDirection());
 
     }
+
+    @Test
+    void should_return_0_negative_1_S_when_execute_command_given_0_0_S_and_M() {
+        //given
+        MarsRover marsRover = new MarsRover(0 , 0 , Direction.N);
+        RoverStatus expectedStatus = new RoverStatus(0 , -1, Direction.E);
+
+        //when
+        marsRover.executeCommand("M");
+
+        //then
+
+        assertEquals(expectedStatus.getLocationY(),marsRover.getLocationY());
+
+    }
 }
