@@ -30,6 +30,9 @@ public class MarsRover implements RoverMovement {
         if (command.equals("L")) {
             turnLeft();
         }
+        if (command.equals("R")){
+            turnRight();
+        }
     }
 
     private void move() {
@@ -45,6 +48,11 @@ public class MarsRover implements RoverMovement {
     @Override
     public void turnLeft() {
         direction = direction.rotateLeft();
+    }
+
+    @Override
+    public void turnRight() {
+        direction = direction.rotateRight();
     }
 
 }
