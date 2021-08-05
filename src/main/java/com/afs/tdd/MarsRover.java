@@ -1,9 +1,15 @@
 package com.afs.tdd;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+import static com.afs.tdd.CommonConstant.*;
+
 public class MarsRover implements RoverMovement {
     int locationX;
     int locationY;
     Direction direction;
+
 
     public MarsRover(int locationX, int locationY, Direction direction) {
         this.locationX = locationX;
@@ -25,11 +31,11 @@ public class MarsRover implements RoverMovement {
 
     public void executeCommand(String command) {
         if (command.length() > 1) {
-            for (int i = 0; i < command.length(); i++) {
-                getMovements(String.valueOf(command.charAt(i)));
-                getLeft(String.valueOf(command.charAt(i)));
-                getRight(String.valueOf(command.charAt(i)));
-            }
+
+          String [] commands = command.split("");
+            Arrays.stream(commands).forEach(s -> { getMovements(s);
+                getLeft(s);
+                getRight(s);});
 
         } else {
             getMovements(command);
@@ -39,19 +45,19 @@ public class MarsRover implements RoverMovement {
     }
 
     private void getRight(String command) {
-        if (command.equals("R")) {
+        if (command.equals(RIGHT)) {
             turnRight();
         }
     }
 
     private void getLeft(String command) {
-        if (command.equals("L")) {
+        if (command.equals(LEFT)) {
             turnLeft();
         }
     }
 
     private void getMovements(String command) {
-        if (command.equals("M")) {
+        if (command.equals(MOVE)) {
             move();
         }
     }

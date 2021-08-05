@@ -3,7 +3,7 @@ package com.afs.tdd;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static com.afs.tdd.CommonConstant.*;
 class DemoTest {
 
     @Test
@@ -13,7 +13,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(0 , 1, Direction.N);
 
         //when
-        marsRover.executeCommand("M");
+        marsRover.executeCommand(MOVE);
 
         //then
 
@@ -58,7 +58,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(0 , -1, Direction.S);
 
         //when
-        marsRover.executeCommand("M");
+        marsRover.executeCommand(MOVE);
 
         //then
 
@@ -73,7 +73,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(0 , 0, Direction.E);
 
         //when
-        marsRover.executeCommand("L");
+        marsRover.executeCommand(LEFT);
 
         //then
 
@@ -88,7 +88,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(0 , 0, Direction.W);
 
         //when
-        marsRover.executeCommand("R");
+        marsRover.executeCommand(RIGHT);
 
         //then
 
@@ -103,7 +103,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(1 , 0, Direction.E);
 
         //when
-        marsRover.executeCommand("M");
+        marsRover.executeCommand(MOVE);
 
         //then
 
@@ -118,7 +118,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(0 , 0, Direction.N);
 
         //when
-        marsRover.executeCommand("L");
+        marsRover.executeCommand(LEFT);
 
         //then
 
@@ -133,7 +133,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(0 , 0, Direction.S);
 
         //when
-        marsRover.executeCommand("R");
+        marsRover.executeCommand(RIGHT);
 
         //then
 
@@ -148,7 +148,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(-1 , 0, Direction.W);
 
         //when
-        marsRover.executeCommand("M");
+        marsRover.executeCommand(MOVE);
 
         //then
 
@@ -163,7 +163,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(0 , 0, Direction.S);
 
         //when
-        marsRover.executeCommand("L");
+        marsRover.executeCommand(LEFT);
 
         //then
 
@@ -177,7 +177,7 @@ class DemoTest {
         RoverStatus expectedStatus = new RoverStatus(0 , 0, Direction.N);
 
         //when
-        marsRover.executeCommand("R");
+        marsRover.executeCommand(RIGHT);
 
         //then
 
