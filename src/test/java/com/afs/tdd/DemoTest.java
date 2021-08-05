@@ -9,8 +9,8 @@ class DemoTest {
     @Test
     void should_return_0_1_N_when_execute_command_given_0_0_N_and_M() {
         //given
-        MarsRover marsRover = new MarsRover(0 , 0 , "N");
-        RoverStatus expectedStatus = new RoverStatus(0 , 1, "N");
+        MarsRover marsRover = new MarsRover(0 , 0 , Direction.N);
+        RoverStatus expectedStatus = new RoverStatus(0 , 1, Direction.N);
 
         //when
         marsRover.executeCommand("M");
@@ -24,8 +24,8 @@ class DemoTest {
     @Test
     void should_return_0_0_W_when_execute_command_given_0_0_N_and_L() {
         //given
-        MarsRover marsRover = new MarsRover(0 , 0 , "N");
-        RoverStatus expectedStatus = new RoverStatus(0 , 0, "W");
+        MarsRover marsRover = new MarsRover(0 , 0 , Direction.N);
+        RoverStatus expectedStatus = new RoverStatus(0 , 0, Direction.W);
 
         //when
         marsRover.executeCommand("L");
