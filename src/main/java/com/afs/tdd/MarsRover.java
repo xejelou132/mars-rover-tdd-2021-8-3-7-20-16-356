@@ -33,8 +33,7 @@ public class MarsRover {
     }
 
     private void move() {
-        String moveDirection = getDirection();
-        switch(moveDirection) {
+        switch(direction) {
             case "N":
                 locationY += 1;
                 break;
