@@ -1,7 +1,6 @@
 package com.afs.tdd;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
 import static com.afs.tdd.CommonConstant.*;
 
@@ -30,20 +29,12 @@ public class MarsRover implements RoverMovement {
     }
 
     public void executeCommand(String command) {
-        if (command.length() > 1) {
-
-            String[] commands = command.split("");
-            Arrays.stream(commands).forEach(s -> {
-                getMovements(s);
-                isLeft(s);
-                isRight(s);
-            });
-
-        } else {
-            getMovements(command);
-            isLeft(command);
-            isRight(command);
-        }
+        String[] commands = command.split("");
+        Arrays.stream(commands).forEach(s -> {
+            getMovements(s);
+            isLeft(s);
+            isRight(s);
+        });
     }
 
     private void isRight(String command) {
