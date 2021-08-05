@@ -141,5 +141,21 @@ class DemoTest {
 
     }
 
+    @Test
+    void should_return_negative_1_0_W_when_execute_command_given_0_0_W_and_M() {
+        //given
+        MarsRover marsRover = new MarsRover(0 , 0 , Direction.W);
+        RoverStatus expectedStatus = new RoverStatus(-1 , 0, Direction.W);
+
+        //when
+        marsRover.executeCommand("M");
+
+        //then
+
+        assertEquals(expectedStatus.getLocationX(),marsRover.getLocationX());
+
+    }
+
+
 
 }
