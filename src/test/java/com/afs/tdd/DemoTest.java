@@ -137,9 +137,9 @@ class DemoTest {
 
         //then
 
-        assertEquals(expectedStatus.getLocationX(),marsRover.getLocationX());
+        assertEquals(expectedStatus.getDirection(),marsRover.getDirection());
 
     }
-    
+
 
 }
