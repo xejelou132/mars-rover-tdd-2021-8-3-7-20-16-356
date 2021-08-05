@@ -32,10 +32,12 @@ public class MarsRover implements RoverMovement {
     public void executeCommand(String command) {
         if (command.length() > 1) {
 
-          String [] commands = command.split("");
-            Arrays.stream(commands).forEach(s -> { getMovements(s);
+            String[] commands = command.split("");
+            Arrays.stream(commands).forEach(s -> {
+                getMovements(s);
                 getLeft(s);
-                getRight(s);});
+                getRight(s);
+            });
 
         } else {
             getMovements(command);
