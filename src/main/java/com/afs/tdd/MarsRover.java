@@ -46,6 +46,9 @@ public class MarsRover implements RoverMovement {
             case E:
                 locationX += 1;
                 break;
+            case W:
+                locationX -= 1;
+                break;
             default:
                 return;
         }
