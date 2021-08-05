@@ -184,6 +184,21 @@ class DemoTest {
         assertEquals(expectedStatus.getDirection(),marsRover.getDirection());
 
     }
+    @Test
+    void should_return_1_1_E_when_execute_command_given_Multiple_Command() {
+        //given
+        MarsRover marsRover = new MarsRover(0 , 0 , Direction.N);
+        RoverStatus expectedStatus = new RoverStatus(1 , 1, Direction.E);
+
+        //when
+        marsRover.executeCommand("MRM");
+
+        //then
+        assertEquals(expectedStatus.getLocationX(),marsRover.getLocationX());
+        assertEquals(expectedStatus.getLocationY(),marsRover.getLocationY());
+        assertEquals(expectedStatus.getDirection(),marsRover.getDirection());
+
+    }
 
 
 
