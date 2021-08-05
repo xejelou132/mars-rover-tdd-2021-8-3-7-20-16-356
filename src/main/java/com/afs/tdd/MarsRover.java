@@ -30,7 +30,7 @@ public class MarsRover implements RoverMovement {
         if (command.equals("L")) {
             turnLeft();
         }
-        if (command.equals("R")){
+        if (command.equals("R")) {
             turnRight();
         }
     }
@@ -42,6 +42,9 @@ public class MarsRover implements RoverMovement {
                 break;
             case S:
                 locationY -= 1;
+                break;
+            case E:
+                locationX += 1;
                 break;
             default:
                 return;
